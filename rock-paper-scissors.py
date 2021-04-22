@@ -41,5 +41,5 @@ def rock_paper_scissors():
         print('You picked', user, 'and the computer picked', computer,'.')
         print("You lose!")
 
-while True:
-    rock_paper_scissors()
+
+rock_paper_scissors()
