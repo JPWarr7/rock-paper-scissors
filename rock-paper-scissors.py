@@ -2,41 +2,38 @@ def rock_paper_scissors():
 
     import random
 
-    user = None
+    user = None 
 
-    computer = random.choice(['rock', 'paper', 'scissors'])
+    computer = random.choice(['rock', 'paper', 'scissors']) # <- computer makes a random choice of rock, paper, or scissors.
 
     while user == None:
-        user = input("Choose rock, paper, or scissors: (surround final option with quotes) ")
-        if user not in ['rock', 'paper', 'scissors']:
+        user = input("Rock, paper, or scissors: ")
+        
+        if user not in ['rock', 'paper', 'scissors']: # <- continues to iterate until the user inputs a valid choice of rock, paper, or scissors.
             print("not a valid input!")
-            user = None
-
-
-    if user == computer:
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("Draw!")
+            user = None 
+            
+    print(f"You picked {user} and the computer picked {computer}.") # <- uses string formatting to output the result to the user.
+    
+    # program decides whether game was a draw, or resulted in user win or loss.
+    
+    if user == computer: 
+        return "Draw!"
 
     if user == "rock" and computer == "scissors":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You win!")
+        return "You win!"
 
     if user == "rock" and computer == "paper":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You lose!")
+        return "You lose!"
 
     if user == "scissors" and computer == "paper":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You win!")
+        return "You win!"
 
     if user == "scissors" and computer == "rock":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You lose!")
+        return "You lose!"
 
     if user == "paper" and computer == "rock":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You win!")
+        return "You win!"
 
     if user == "paper" and computer == "scissors":
-        print('You picked', user, 'and the computer picked', computer,'.')
-        print("You lose!")
+        return "You lose!"
