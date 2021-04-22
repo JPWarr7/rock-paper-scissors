@@ -40,6 +40,3 @@ def rock_paper_scissors():
     if user == "paper" and computer == "scissors":
         print('You picked', user, 'and the computer picked', computer,'.')
         print("You lose!")
-
-
-rock_paper_scissors()
